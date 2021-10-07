@@ -1,0 +1,76 @@
+
+#first {
+    border-radius: 25%;
+    background-color: #454d55;
+    color: #a9dcf1;
+}
+#second {
+    border-radius: 2%;
+    background-color: #a9dcf1;
+}
+
+#buttons {
+    display: none;
+    border-radius: 5%;
+    text-align: right;
+}
+
+#delete{
+    margin-left: 1%;
+    float: right;
+}
+
+#display{
+    float: right;
+    margin-left: 1%;
+}
+
+#btnHeader{
+    display: inline;
+    margin-right: 1%;
+}
+
+#weather{
+    border-radius: 10%;
+}
+
+#cloudAnima{
+    width: 100%;
+    border-radius: 3%;
+}
+
+#cloudAnima2{
+    width: 100%;
+    border-radius: 3%;
+}
+#animaGif{
+    border-radius: 3%;
+}
+
+#organizeButtons{
+    border-radius: 2%;
+    background-color: #a9dcf1;
+}
+
+#info{
+    background-color: #a9dcf1;
+}
+
+#btnHeader{
+    background-color: #a9dcf1;
+    border-radius: 10%;
+}
+
+#table, th, td {
+    border: 3px solid black;
+    border-collapse: collapse;
+}
+
+#inf{
+    display: none;
+}
+
+#logout{
+    margin-left: 3%;
+    display: inline;
+}

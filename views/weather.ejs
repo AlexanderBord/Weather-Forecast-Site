@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ex 3</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="stylesheets/weatherStyle.css">
+    <link rel="shortcut icon" href="#">
+</head>
+<body>
+<script src="javascripts/weather.js"></script>
+
+<div class="container-fluid">
+    <br>
+    <div class="container-fluid row">
+        <div class="col-md-1"> </div>
+        <div class="col-md-10 text-center" id="first">
+            <h1>Welcome <%= userName %></h1>
+            <h2>Weather Site</h2>
+            <div id="animaGif"> </div>
+        </div>
+        <div class="col-md-1"> </div>
+    </div>
+    <br>
+    <div class ="container-fluid row" id="forms">
+        <div class="col-md-1"> </div>
+        <div class="col-md-3 col-sm-12" id="second">
+            <form>
+                <h2><u>Map Location</u></h2>
+                <div class="form-group">
+                    <label>Place</label>
+                    <input type="text" class="form-control" name="name" id="place">
+                </div>
+                <div class="form-group">
+                    <label>Latitude</label>
+                    <input type="text" class="form-control" name="lat" id="lat">
+                </div>
+                <div class="form-group">
+                    <label>Longitude</label>
+                    <input type="text" class="form-control" name="lon" id="lon">
+                </div>
+            </form>
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary" id="btn">Add Place</button>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-12" id="buttons">
+            <h4 id="btnHeader"> </h4>
+            <button id="display" class="btn btn-success"> Display </button>
+            <button id="delete" class="btn btn-danger"> Delete </button>
+        </div>
+        <div class="col-md-4 col-sm-12 dropdown">
+            <a class="btn btn-primary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Choose Location
+            </a>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink" id="data" style="min-width:5%"> </div>
+
+            <Button id="reset" class="btn btn-danger"> Reset </Button>
+            <form action="/logout" method="post" id="logout">
+                <Button class="btn btn-info"> Logout </Button>
+            </form>
+        </div>
+    </div>
+    <br>
+    <div class="container-fluid row">
+        <div class="col-md-1"> </div>
+        <div class="col-md-3 col-sm-12" id="weather">
+        </div>
+        <div class="col-md-1"> <br> </div>
+        <div class="col-md-6 col-sm-12" id="image">
+        </div>
+        <div class="col-md-1"> </div>
+    </div>
+    <br>
+    <div class ="container-fluid row" id="inf">
+        <div class ="col-md-12">
+            <table class="table table-dark" style="width:100%" id="table">
+                <tr>
+                    <td> <b>Date</b> </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <br>
+    <div class="container-fluid">
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Error message</h5>
+                    </div>
+                    <div class="modal-body">
+                        <p id="msg"></p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal" style="visibility: hidden" id="ask" >Delete anyway</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal" id="close" >Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="shortcut icon" href="#">
+</head>
+<body>
+
+<div class="container-fluid">
+    <div id="myForm">
+        <h3> <%= msg %> </h3> <hr><br>
+        <form action="/signin" method="post">
+            <label for="email">E-mail</label>
+            <input type="email" name="email" id="email" required> <br>
+            <label for="pass"> Password </label>
+            <input type="password" id="pass" name="password" minlength="8" required> <br> <br>
+            <input type="submit" value="Submit">
+            <button id="btn"> Register </button>
+        </form>
+    </div> <br>
+    <div> <%= msg2 %></div>
+</div>
+<script src="javascripts/signin.js"></script>
+</body>
+</html>

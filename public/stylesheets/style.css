@@ -1,0 +1,28 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+#email{
+  margin-bottom: 1%;
+}
+
+#fname{
+  margin-bottom: 1%;
+}
+
+#lname{
+  margin-bottom: 1%;
+}
+
+#pass{
+  margin-bottom: 1%;
+}
+
+#pass2{
+  margin-bottom: 1%;
+}
